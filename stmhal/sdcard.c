@@ -170,7 +170,8 @@ void HAL_SD_MspDeInit(SD_HandleTypeDef *hsd) {
 }
 
 bool sdcard_is_present(void) {
-    return HAL_GPIO_ReadPin(MICROPY_HW_SDCARD_DETECT_PIN.gpio, MICROPY_HW_SDCARD_DETECT_PIN.pin_mask) == MICROPY_HW_SDCARD_DETECT_PRESENT;
+    return true;
+    // return HAL_GPIO_ReadPin(MICROPY_HW_SDCARD_DETECT_PIN.gpio, MICROPY_HW_SDCARD_DETECT_PIN.pin_mask) == MICROPY_HW_SDCARD_DETECT_PRESENT;
 }
 
 bool sdcard_power_on(void) {
